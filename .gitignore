@@ -1,0 +1,15 @@
+﻿# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Archivos temporales de compilación
+/bin/
+/obj/
+
+# Archivos de migración de base de datos local
+*.db
+
+# Otros innecesarios
+*.log
+*.DS_Store
