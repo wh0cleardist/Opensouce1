@@ -1,0 +1,43 @@
+﻿@model IEnumerable<parcial.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Listado de Clientes";
+}
+
+<h2>Listado de Clientes</h2>
+
+<p>
+    <a asp-action="Crear">Crear Nuevo Cliente</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => cliente.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => cliente.Email)
+                </td>
+                <td>
+                    <a asp-action="Editar" asp-route-id="@cliente.Id">Editar</a> |
+                    <a asp-action="Detalles" asp-route-id="@cliente.Id">Detalles</a> |
+                    <a asp-action="Eliminar" asp-route-id="@cliente.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
