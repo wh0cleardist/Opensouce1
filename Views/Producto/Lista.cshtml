@@ -1,8 +1,9 @@
-@{
-    ViewBag.Title = "Lista de Productos";
-}
+@model IEnumerable<parcial.Models.Producto>
 
-<h2>@ViewBag.Title</h2>
+@{
+    ViewData["Title"] = "Lista de Productos";
+}
+<h1>@ViewData["Title"]</h1>
 
 <p>Bienvenido a la lista de productos.</p>
 

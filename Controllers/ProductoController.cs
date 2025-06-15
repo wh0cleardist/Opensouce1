@@ -6,7 +6,7 @@ namespace parcial.Controllers
     public class ProductoController : Controller
     {
         private readonly AppDbContext _context = new AppDbContext();
-        public IActionResult Index()
+        public IActionResult Lista()
         {
             var productos = _context.Producto.ToList();
             return View(productos);
